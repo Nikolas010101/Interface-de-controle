@@ -27,15 +27,15 @@ body {
 	grid-template-columns: auto auto auto;
 	gap: 20px;
 }
-.emotion-container{
-    text-align: center;
-    align-content: center;
-    font-size: 1.75em;
+.emotion-container {
+	text-align: center;
+	align-content: center;
+	font-size: 1.75em;
 }
 .emotion-buttons {
 	display: grid;
-	grid-template-columns: repeat(4, auto);
-	gap: 10px
+	grid-template-columns: repeat(5, auto);
+	gap: 10px;
 }
 .servo-control {
 	display: grid;

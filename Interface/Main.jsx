@@ -22,10 +22,11 @@ function Main() {
                     <CallButton src="src/Imagens/video-on.svg" title="Desativar vídeo" callback={console.log} />
                 </div>
                 <div className="emotion-buttons">
-                    <EmotionButton emotion="happy" callback={console.log}/>
-                    <EmotionButton emotion="sad" callback={console.log}/>
-                    <EmotionButton emotion="surprise" callback={console.log}/>
-                    <EmotionButton emotion="doubt" callback={console.log}/>
+                    <EmotionButton emotion="neutral" callback={console.log} title="Neutralidade"/>
+                    <EmotionButton emotion="happy" callback={console.log} title="Felicidade"/>
+                    <EmotionButton emotion="sad" callback={console.log} title="Tristeza"/>
+                    <EmotionButton emotion="surprise" callback={console.log} title="Surpresa"/>
+                    <EmotionButton emotion="doubt" callback={console.log} title="Dúdivda"/>
                 </div>
             </div>
             <div className="servo-control">
