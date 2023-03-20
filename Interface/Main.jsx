@@ -4,12 +4,15 @@ function Main() {
     const [state, setState] = useState({
         pan: 0,
         tilt: 0,
-        emotion: ""
+        emotion: "neutral"
     })
 
     useEffect(() => {
         console.log(state)
-        // TODO http request
+        const url = new URL('http://127.0.0.1:5000/control')
+        const params = new URLSearchParams({ pan: state.pan, tilt: state.tilt })
+        url.search = params
+        fetch(url).then(r => r.json()).then((r) => console.log(r)).catch(r => console.log("Não foi possível realizar a requisição"))
     }, [state])
 
     return <section className="grid-container">
@@ -22,11 +25,11 @@ function Main() {
                     <CallButton src="src/Imagens/video-on.svg" title="Desativar vídeo" callback={console.log} />
                 </div>
                 <div className="emotion-buttons">
-                    <EmotionButton emotion="neutral" callback={console.log} title="Neutralidade"/>
-                    <EmotionButton emotion="happy" callback={console.log} title="Felicidade"/>
-                    <EmotionButton emotion="sad" callback={console.log} title="Tristeza"/>
-                    <EmotionButton emotion="surprise" callback={console.log} title="Surpresa"/>
-                    <EmotionButton emotion="doubt" callback={console.log} title="Dúdivda"/>
+                    <EmotionButton emotion="neutral" callback={console.log} title="Neutralidade" />
+                    <EmotionButton emotion="happy" callback={console.log} title="Felicidade" />
+                    <EmotionButton emotion="sad" callback={console.log} title="Tristeza" />
+                    <EmotionButton emotion="surprise" callback={console.log} title="Surpresa" />
+                    <EmotionButton emotion="doubt" callback={console.log} title="Dúdivda" />
                 </div>
             </div>
             <div className="servo-control">
