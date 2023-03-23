@@ -11,3 +11,4 @@ function EmotionButton({ emotion, title = emotion, callback = () => { } }) {
     }
     return <div className="icon emotion-container" title={title} onClick={handleClick}><span className="emotion-text">{emotions[emotion]}</span></div>
 }
+export default EmotionButton

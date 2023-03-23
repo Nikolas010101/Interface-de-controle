@@ -14,3 +14,4 @@ function Slider({ id, state, setState, min = -90, max = 90, text = "" }) {
         </div>
     </div>
 }
+export default Slider

@@ -1,5 +1,14 @@
-const { useState, useEffect } = React
-function Main() {
+import './index.css';
+import {useEffect, useState} from "react"
+import CallButton from "./components/CallButton"
+import EmotionButton from "./components/EmotionButton"
+import Slider from "./components/Slider"
+import micOn from "./Imagens/mic-on.svg"
+import phone from "./Imagens/phone.svg"
+import videoOn from "./Imagens/video-on.svg"
+import wip from "./Imagens/wip.png"
+
+function App() {
 
     const [state, setState] = useState({
         pan: 0,
@@ -8,7 +17,6 @@ function Main() {
     })
 
     useEffect(() => {
-        console.log(state)
         const url = new URL('http://127.0.0.1:5000/control')
         const params = new URLSearchParams({ pan: state.pan, tilt: state.tilt })
         url.search = params
@@ -16,13 +24,13 @@ function Main() {
     }, [state])
 
     return <section className="grid-container">
-        <img className="placeholder" src="src/Imagens/wip.png" alt="" />
+        <img className="placeholder" src={wip} alt="" />
         <div className="controls">
             <div className="call-control">
                 <div className="call-buttons">
-                    <CallButton src="src/Imagens/phone.svg" title="Desligar" callback={console.log} />
-                    <CallButton src="src/Imagens/mic-on.svg" title="Desativar microfone" callback={console.log} />
-                    <CallButton src="src/Imagens/video-on.svg" title="Desativar vídeo" callback={console.log} />
+                    <CallButton src={phone} title="Desligar" callback={console.log} />
+                    <CallButton src={micOn} title="Desativar microfone" callback={console.log} />
+                    <CallButton src={videoOn} title="Desativar vídeo" callback={console.log} />
                 </div>
                 <div className="emotion-buttons">
                     <EmotionButton emotion="neutral" callback={console.log} title="Neutralidade" />
@@ -39,3 +47,4 @@ function Main() {
         </div>
     </section>
 }
+export default App

@@ -1,0 +1,8 @@
+{
+	"short_name": "Interface de controle",
+	"name": "Interface de controle para um robô de telepresença",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}
