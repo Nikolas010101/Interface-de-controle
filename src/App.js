@@ -3,10 +3,10 @@ import {useEffect, useState} from "react"
 import CallButton from "./components/CallButton"
 import EmotionButton from "./components/EmotionButton"
 import Slider from "./components/Slider"
-import micOn from "./Imagens/mic-on.svg"
-import phone from "./Imagens/phone.svg"
-import videoOn from "./Imagens/video-on.svg"
-import wip from "./Imagens/wip.png"
+import micOn from "./img/mic-on.svg"
+import phone from "./img/phone.svg"
+import videoOn from "./img/video-on.svg"
+import wip from "./img/wip.png"
 
 function App() {
 
